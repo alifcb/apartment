@@ -1,0 +1,57 @@
+<!--bakhsh header-->
+<md-toolbar md-scroll-shrink ng-if="true">
+<div class="md-toolbar-tools">
+  <md-button href="#/" class="md-icon-button" aria-label="Settings">
+    <md-icon md-svg-icon="img/icons/refresh62.svg"></md-icon>
+  </md-button>
+    <span flex></span>
+  <h2>
+    <span>آپارتمان نشینان</span>
+  </h2>
+  <md-button  ng-click="toggleRight()"  class="md-icon-button" aria-label="More">
+    <md-icon md-svg-icon="img/icons/left224.svg"></md-icon>
+  </md-button>
+</div>
+</md-toolbar>
+</div>
+<!--end bakhsh header--> 
+<div class="gridListdemoBasicUsage ">
+<md-grid-list
+    md-cols-sm="2" md-cols-md="2" md-cols-gt-md="6"
+    md-row-height-gt-md="1:1" md-row-height="2:2"
+    md-gutter="12px" md-gutter-gt-sm="8px" >
+<md-grid-tile class="gray"
+    md-rowspan="1" md-colspan="1" md-colspan-sm="1">
+    <a href="#about"><img src="img/logo.png" /></a>
+  <md-grid-tile-footer>
+    <h3>#1: (3r x 2c)</h3>
+  </md-grid-tile-footer>
+</md-grid-tile>
+<md-grid-tile class="green">
+ <a href="#list"><img src="img/360.png" /></a>
+  <md-grid-tile-footer>
+    <h3>#2: (1r x 1c)</h3>
+  </md-grid-tile-footer>
+</md-grid-tile>
+<md-grid-tile class="yellow">
+ <a href="#list"><img src="img/jyg.png" /></a>
+  <md-grid-tile-footer>
+    <h3>#3: (1r x 1c)</h3>
+  </md-grid-tile-footer>
+</md-grid-tile>
+<md-grid-tile class="blue"
+    md-rowspan="2">
+  <a href="#list"><img src="img/logo.png" /></a>
+  <md-grid-tile-footer>
+    <h3>#4: (2r x 1c)</h3>
+  </md-grid-tile-footer>
+</md-grid-tile>
+<md-grid-tile class="red"
+    md-rowspan="1" md-colspan="1" md-colspan-sm="1">
+      <a href="#list"><img src="img/360.png" /></a>
+  <md-grid-tile-footer>
+    <h3>#5: (2r x 2c)</h3>
+  </md-grid-tile-footer>
+</md-grid-tile>
+</md-grid-list>
+</div>
