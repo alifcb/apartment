@@ -1,44 +1,66 @@
 <!DOCTYPE html>
  <html lang="en" >
-    <head>
-          <meta charset="utf-8" />
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="msapplication-tap-highlight" content="no" />
-        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+      <head>
+      <meta charset="utf-8" />
+      <meta name="format-detection" content="telephone=no" />
+      <meta name="msapplication-tap-highlight" content="no" />
+      <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/angular-material.min.css">
-    
-        <title>Hello World</title>
+  <link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css">    
+        <title>آپارتمان 19</title>
     </head>
-<body ng-app="StarterApp"   ng-controller="mainController">
- 
-<div layout="column" ng-cloak>
-
-<div ng-controller="Sidnav" md-swipe-left="toggleRight()"> 
-    <md-sidenav   class="md-sidenav-right md-whiteframe-z2" md-component-id="right">
-      <md-toolbar class="md-theme-light" >
-        <h1 class="md-toolbar-tools">Sidenav Right</h1>
+      <body ng-app="StarterApp"   ng-controller="mainController" ng-cloak>
+      
+      <div layout="column">
+      <div ng-controller="Sidnav" md-swipe-left="toggleRight()"> 
+      <md-sidenav   class="md-sidenav-right md-whiteframe-z2" md-component-id="right">
+        <md-toolbar class="md-theme-light" >
+        <div class="md-toolbar-tools"><span flex></span>
+        <h2>آپارتمان 19</h2>
+            </div>
       </md-toolbar>
       <md-content ng-controller="RightCtrl" md-swipe-right="close()" layout-padding>
-        <form>
-          <md-input-container>
-            <label for="testInput">Test input</label>
-            <input type="text" id="testInput"
-                   ng-model="data" md-autofocus>
-          </md-input-container>
-        </form>
-        <md-button ng-click="close()" class="md-primary">
-          Close Sidenav Right
-        </md-button>
+
+  
+     <md-list-item ng-click="go(setting.links)" ng-repeat="setting in settings">
+     <md-icon md-svg-icon="{{ setting.icon }}"></md-icon>
+     <p> {{ setting.name }} </p>
+      </md-list-item>
+      
+      <md-divider ></md-divider> 
+      
+        <md-list-item ng-click="go('content/help/33')" >
+      <md-icon md-svg-icon="img/icons/worker47.svg"></md-icon>
+      <p>درباره ما </p>
+      </md-list-item>
+      <md-list-item ng-click="go('content/help/36');close()">
+      <md-icon md-svg-icon="img/icons/support.svg"></md-icon>
+      <p> راهنما </p>
+      </md-list-item> 
       </md-content>
     </md-sidenav>
-
+    
+<!--bakhsh header-->
+<md-toolbar md-scroll-shrink ng-if="true">
+<div class="md-toolbar-tools">
+  <md-button href="#/" class="md-icon-button" aria-label="Settings">
+    <md-icon md-svg-icon="img/icons/refresh62.svg"></md-icon>
+  </md-button>
+    <span flex>
+ <img src="img/apartman19.png" height="28" width="110">
+ </span>
+  <md-button ng-click="toggleRight()"  class="md-icon-button" aria-label="More">
+    <md-icon md-svg-icon="img/icons/list30.svg"></md-icon>
+  </md-button>
+</div>
+</md-toolbar>
+</div>
+<!--end bakhsh header--> 
 <!--bakhsh pages-->     
   <div ng-view ></div>
 <!--end bakhsh pages--> 
 </div>
-
 
 <div class="app">
     <div id="deviceready" >
@@ -48,16 +70,18 @@
 </div>
 
   <!-- Angular Material Dependencies --> 
-    <script src="bower_components/angular/angular.min.js"></script>
-    <script src="bower_components/angular/angular-route.js"></script>
-    <script src="bower_components/angular-aria/angular-aria.min.js"></script>
-    <script src="bower_components/angular-animate/angular-animate.min.js"></script>
-    <script src="js/angular-material.min.js"></script>
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/angular/angular-route.js"></script>
+<script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+<script src="bower_components/angular-aria/angular-aria.min.js"></script>
+<script src="bower_components/angular-animate/angular-animate.min.js"></script>
+<script src="bower_components/angular-material/angular-material.min.js"></script>
 
-        <script type="text/javascript" src="cordova.js"></script>
-       <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript">
-            app.initialize();
-        </script>
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+
+<script type="text/javascript">
+app.initialize();
+</script>
     </body>
 </html>

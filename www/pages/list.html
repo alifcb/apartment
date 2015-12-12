@@ -1,67 +1,25 @@
 <div ng-controller="SubheaderAppCtrl" layout="column" flex layout-fill ng-cloak>
-  <md-toolbar >
-    <div class="md-toolbar-tools">My Messages</div>
+  <md-toolbar class="md-toolbar-2" md-scroll-shrink>
+
+    <div class="md-toolbar-tools">  <span class="flex"></span><h2>لیست مطالب</h2></div>
   </md-toolbar>
-  <md-content style="height: 600px;" md-theme="altTheme">
+  <md-content class="pading0" style="height: 650px;" md-theme="altTheme">
     <section>
-      <md-subheader class="md-primary">Unread Messages</md-subheader>
-      <md-list layout-padding>
-        <md-list-item class="md-3-line" ng-repeat="message in messages">
-            <img ng-src="{{message.face}}" class="md-avatar" alt="{{message.who}}">
-            <div class="md-list-item-text">
-              <h3>{{message.what}}</h3>
-              <h4>{{message.who}}</h4>
-              <p>
-                {{message.notes}}
-              </p>
+      <md-list >
+        <md-list-item class="md-2-line"  ng-click="cont(x.id)"  ng-repeat="x in mins">
+        <img ng-src="{{x.direct}}{{x.pic}}" class="md-avatar" alt="{{x.id}}">
+                   <div  class="md-list-item-text" >
+              <h3>{{x.subject}}</h3>
+              
+              <p class="md-body-1" >
+              {{x.date}}
+            </p>
             </div>
+      <md-divider ></md-divider>         
         </md-list-item>
+     
       </md-list>
     </section>
-    <section>
-      <md-subheader class="md-warn">Late Messages</md-subheader>
-      <md-list layout="column" layout-padding>
-        <md-list-item class="md-3-line" ng-repeat="message in messages">
-          <img ng-src="{{message.face}}" class="md-avatar" alt="{{message.who}}">
-          <div class="md-list-item-text">
-            <h3>{{message.what}}</h3>
-            <h4>{{message.who}}</h4>
-            <p>
-              {{message.notes}}
-            </p>
-          </div>
-        </md-list-item>
-      </md-list>
-    </section>
-    <section>
-      <md-subheader>Read Messages</md-subheader>
-      <md-list layout="column" layout-padding>
-        <md-list-item class="md-3-line" ng-repeat="message in messages">
-          <img ng-src="{{message.face}}" class="md-avatar" alt="{{message.who}}">
-          <div class="md-list-item-text">
-            <h3>{{message.what}}</h3>
-            <h4>{{message.who}}</h4>
-            <p>
-              {{message.notes}}
-            </p>
-          </div>
-        </md-list-item>
-      </md-list>
-    </section>
-    <section>
-      <md-subheader class="md-accent">Archived messages</md-subheader>
-      <md-list layout="column" layout-padding>
-        <md-list-item class="md-3-line" ng-repeat="message in messages">
-          <img ng-src="{{message.face}}" class="md-avatar" alt="{{message.who}}">
-          <div class="md-list-item-text">
-            <h3>{{message.what}}</h3>
-            <h4>{{message.who}}</h4>
-            <p>
-              {{message.notes}}
-            </p>
-          </div>
-        </md-list-item>
-      </md-list>
-    </section>
+
   </md-content>
   </div>

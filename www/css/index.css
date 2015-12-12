@@ -1,28 +1,39 @@
+@font-face {
+  font-family: 'BYekan';
+  src: url('../fonts/wYekan.eot?#') format('eot'),  /* IE6–8 */
+       url('../fonts/wYekan.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+       url('../fonts/wYekan.ttf') format('truetype');  /* Saf3—5, Chrome4+, FF3.5, Opera 10+ */
+}
 /*------------------------------gride -------------------------------*/ 
 .gridListdemoBasicUsage md-grid-list {
   margin: 8px; }
 .gridListdemoBasicUsage .gray {
-  background: #f5f5f5; }
+  background: #CCCC99; }
 .gridListdemoBasicUsage .green {
-  background: #b9f6ca; }
+  background: #D13D94; }
 .gridListdemoBasicUsage .yellow {
-  background: #ffff8d; }
+  background: #F5851F; }
 .gridListdemoBasicUsage .blue {
-  background: #84ffff; }
+  background: #CADA2A; }
 .gridListdemoBasicUsage .purple {
-  background: #b388ff; }
+  background: #81A4B9; }
 .gridListdemoBasicUsage .red {
-  background: #ff8a80; }
+  background: #CFE8F6; }
 .gridListdemoBasicUsage md-grid-tile {
   transition: all 400ms ease-out 50ms; }
   
 /*---------------------------------header -------------------------------*/ 
-.md-toolbar-tools{height:54px !important; min-height:54px !important; max-height:54px !important;}
+.md-toolbar-tools{height:54px !important; min-height:54px !important; max-height:54px !important;  }
 .md-button.md-icon-button{height:54px !important; min-height:54px !important; max-height:54px !important;}
 md-toolbar{height:54px !important; min-height:54px !important; max-height:54px !important;}
  
 /*---------------------------------header -------------------------------*/ 
-
+md-grid-list md-grid-tile md-grid-tile-footer h3, md-grid-list md-grid-tile md-grid-tile-footer h4, md-grid-list md-grid-tile md-grid-tile-header h3, md-grid-list md-grid-tile md-grid-tile-header h4{
+	font-family:BYekan;
+	text-align:right;
+	direction:rtl;
+	margin:0 16px 0 0 !important;
+}
 
 md-card {
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
@@ -185,7 +196,34 @@ md-card {
 /*---------------------------------subheaderd -------------------------------*/ 
 
 .subheaderdemoBasicUsage .face {
-  border-radius: 30px;
-  border: 1px solid #ddd;
-  width: 48px;
-  margin: 16px; }
+  border-bottom: 1px solid #ddd;
+ }
+/*---------------------------------tabs -------------------------------*/ 
+.tabsdemoDynamicHeight md-content {
+  background-color: transparent !important; }
+  .tabsdemoDynamicHeight md-content md-tabs {
+    background: #f6f6f6;}
+    .tabsdemoDynamicHeight md-content md-tabs md-tabs-wrapper {
+      background:#e74c3c none repeat scroll 0 0; }
+  .tabsdemoDynamicHeight md-content h1:first-child {
+    margin-top: 0; }
+	
+md-toolbar.md-default-theme:not(.md-menu-toolbar), md-toolbar:not(.md-menu-toolbar){background-color: #34495e !important; }	
+md-toolbar.md-toolbar-2{background-color:#e74c3c  !important;}
+
+md-toolbar.md-default-theme:not(.md-menu-toolbar), md-toolbar:not(.md-menu-toolbar) md-icon{ color:rgba(255,255,255,1) !important;}
+md-toolbar.md-default-theme:not(.md-menu-toolbar), md-toolbar:not(.md-menu-toolbar){ font-family:BYekan; color:rgba(255,255,255,1) !important;}
+/*---------------------------------rtl ------------------------------*/ 
+md-list-item .md-no-style.md-button, md-list-item.md-no-proxy.md-button{text-align:right !important;}
+md-list-item md-icon{margin-left:10px !important; margin-right:0px !important;}
+.md-subheader{ text-align:right !important; }
+.md-toolbar-tools{text-align:right !important; font-size:17px !important;}
+.md-subheader .md-subheader-inner{ padding:16px 16px 16px 0px !important;} 
+md-list-item .md-avatar-icon, md-list-item .md-list-item-inner .md-avatar-icon, md-list-item .md-list-item-inner > .md-avatar, md-list-item > .md-avatar{ margin:8px 0 8px 16px !important;}
+/*---------------------------------list ------------------------------*/ 
+md-list-item.md-2-line, md-list-item.md-2-line > .md-no-style{direction:rtl; text-align:justify !important; padding:5px ;}
+md-content{ text-align:justify !important; direction:rtl; padding: 10px 12px !important;}
+.pading0{padding:0 !important;}
+h3{ font-family:BYekan !important; padding-bottom:5px; }
+p{ font-family:BYekan !important; }
+md-content.wimg img{ width:100% !important;}

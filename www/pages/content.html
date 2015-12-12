@@ -1,0 +1,13 @@
+<div ng-controller="contentController" ng-repeat="x in textfull | filter:{ id: pageid }" >
+  <md-toolbar class="md-warn md-toolbar-2">
+    <div class="md-toolbar-tools">
+        <span flex></span>
+      <h2 class="md-flex">{{x.subject}}</h2>
+    </div>
+  </md-toolbar>
+  <md-content flex layout-padding class="wimg" >
+              {{unescap(x.texts)}}
+              <p class="md-body-1 " ng-bind-html="myHTML">
+              </p>
+  </md-content>
+</div>
