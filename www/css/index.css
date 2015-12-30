@@ -227,3 +227,5 @@ md-content{ text-align:justify !important; direction:rtl; padding: 10px 12px !im
 h3{ font-family:BYekan !important; padding-bottom:5px; }
 p{ font-family:BYekan !important; }
 md-content.wimg img{ width:100% !important;}
+md-list-item.md-2-line, md-list-item.md-2-line > .md-no-style{padding:0 !important;}
+md-list{padding:0 !important;}

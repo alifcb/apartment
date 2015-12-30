@@ -30,11 +30,11 @@
       
       <md-divider ></md-divider> 
       
-        <md-list-item ng-click="go('content/help/33')" >
+        <md-list-item ng-click="go('content/help/33');close();" >
       <md-icon md-svg-icon="img/icons/worker47.svg"></md-icon>
       <p>درباره ما </p>
       </md-list-item>
-      <md-list-item ng-click="go('content/help/36');close()">
+      <md-list-item ng-click="go('content/help/36'); close();">
       <md-icon md-svg-icon="img/icons/support.svg"></md-icon>
       <p> راهنما </p>
       </md-list-item> 
@@ -65,6 +65,8 @@
 <div class="app">
     <div id="deviceready" >
         <p class="  listening"> </p>
+        <a onClick="tests(6,'nima')">afgfef</a>
+        <p id="ali"></p>
         <p class=" received"> </p>
     </div>
 </div>
@@ -76,9 +78,10 @@
 <script src="bower_components/angular-aria/angular-aria.min.js"></script>
 <script src="bower_components/angular-animate/angular-animate.min.js"></script>
 <script src="bower_components/angular-material/angular-material.min.js"></script>
-
-<script type="text/javascript" src="cordova.js"></script>
+<script src="js/jquery-1.11.3.min.js"></script> 
+<script type="text/javascript" src="js/cordova.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/angular.js"></script>
 
 <script type="text/javascript">
 app.initialize();
